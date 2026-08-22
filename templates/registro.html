@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro</title>
+
+    {% load static %}
+<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+</head>
+
+<body class="fondo-login">
+
+<div class="contenedor-login">
+
+    <div class="info-login">
+
+        <h1>Únete a vajistech</h1>
+
+        <p>
+            Encuentra las mejores propiedades en un solo lugar.
+        </p>
+
+        <p>
+            Compra, arrienda y descubre nuevas oportunidades.
+        </p>
+
+        <p>
+            Nuestro equipo te ayudará en cada paso.
+        </p>
+
+    </div>
+
+   <div class="formulario-login">
+
+    <h2>Crear Cuenta</h2>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <input type="text" name="nombres" placeholder="Nombres" required>
+
+        <input type="text" name="apellidos" placeholder="Apellidos" required>
+
+        <input type="text" name="celular" placeholder="Celular" required>
+
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+
+        <input type="password" name="password" placeholder="Contraseña" required>
+
+        <button type="submit">CREAR CUENTA</button>
+
+    </form>
+
+    <a href="{% url 'login' %}">¿Ya estás registrado? Inicia sesión</a>
+
+</div>
+    
+
+</div>
+
+</body>
+</html>

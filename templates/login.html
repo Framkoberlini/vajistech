@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+</head>
+
+<body class="fondo-login">
+
+<div class="contenedor-login">
+
+    <div class="info-login">
+
+        <h1>Descubre las ventajas de unirte a vajistech</h1>
+
+        <p>
+            Encuentra casas, apartamentos, lotes y propiedades comerciales
+            en diferentes zonas y precios.
+        </p>
+
+        <p>
+            Verificamos cada propiedad y trabajamos con información transparente.
+        </p>
+
+        <p>
+            Nuestro equipo te acompaña antes, durante y después de la compra.
+        </p>
+
+    </div>
+
+    <div class="formulario-login">
+
+    <h2>Inicia Sesión</h2>
+    {% if error %}
+    <p class="mensaje-error">{{ error }}</p>
+{% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <input
+            type="text"
+            name="username"
+            placeholder="Correo o usuario"
+            required
+        >
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Contraseña"
+            required
+        >
+
+        <button type="submit">INGRESAR</button>
+    </form>
+
+   <a href="/registro/">CREAR CUENTA</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Favoritos</title>
+
+<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+</head>
+
+<body>
+
+<header class="header-detalle">
+
+<img src="{% static 'img/logo.png' %}">
+
+<h1>Mis Favoritos</h1>
+
+</header>
+
+<section class="propiedades-grid">
+
+    {% if favoritos %}
+
+        {% for propiedad in favoritos %}
+
+            <div class="card">
+
+                {% if propiedad.imagen %}
+                    <img src="{{ propiedad.imagen }}" alt="{{ propiedad.nombre }}">
+                {% endif %}
+
+                <h3>{{ propiedad.nombre }}</h3>
+
+                <p>{{ propiedad.precio }}</p>
+
+                {% if propiedad.detalle_url %}
+                    <a href="{{ propiedad.detalle_url }}">
+                        <button type="button">Ver Detalle</button>
+                    </a>
+                {% endif %}
+
+            </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <p>No tienes propiedades favoritas todavía.</p>
+
+    {% endif %}
+
+</section>
+
+
+</body>
+
+</html>

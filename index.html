@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VajisTech</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+       <img src="img/logo.png" class="logo-img">
+    </div>
+
+    <nav>
+
+       <a href="index.html">Inicio</a>
+
+<a href="propiedades.html">Propiedades</a>
+
+<a href="favoritos.html">Favoritos</a>
+
+<a href="nosotros.html">Nosotros</a>
+
+<a href="login.html">Ingresar</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <h2>Venta Y Arriendo De Casas en Colombia</h2>
+
+    <p>Más de 2000 casas disponibles</p>
+
+   <div class="buscador">
+
+    <input type="text" id="busqueda" placeholder="Buscar casa, ciudad o barrio">
+
+    <button onclick="buscarCasa()">Buscar</button>
+
+</div>
+
+    <div class="botones">
+
+      <a href="arrendar.html">
+    <button>Arrendar</button>
+</a>
+
+<a href="comprar.html">
+    <button>Comprar</button>
+</a>
+
+    </div>
+
+</section>
+   <div class="filtros">
+
+    <select>
+        <option>Ciudad</option>
+        <option>Bogotá</option>
+        <option>Medellín</option>
+    </select>
+
+    <select>
+        <option>Tipo</option>
+        <option>Casa</option>
+        <option>Apartamento</option>
+    </select>
+
+</div>
+<section class="propiedades" id="arriendo">
+    <div class="card">
+
+<img src="img/Casa-Samaria.jpg">
+
+<h3>Casa en Chía</h3>
+
+<p>$650.000.000</p>
+
+<a href="detalle_propiedad.html">
+
+<button class="favorito-btn">
+
+Ver Detalle
+
+</button>
+
+</a>
+
+</div>
+
+    <div class="card">
+
+        <img src="https://media1.amarilo.com.co/website/s3fs-public/blog/2023-03/Casa-Samaria.jpg">
+
+        <a href="propiedades.html">Propiedades</a>
+
+    <h3>Casa en Chía</h3>
+
+</a>
+
+        <p>5 habitaciones - 2 baños</p>
+
+        <h4>$5.000.000</h4>
+        <a href="https://maps.google.com" target="_blank" class="ubicacion">
+    📍 Ver ubicación
+</a>
+        <button class="favorito">❤ Favorito</button>
+
+    </div>
+    <div class="card">
+
+<img src="img/Casa-Samaria.jpg">
+
+<h3>Casa Moderna</h3>
+
+<p>$450.000.000</p>
+
+<a href="detalle_moderna.html">
+
+<button class="favorito-btn">
+
+Ver Detalle
+
+</button>
+
+</a>
+
+</div>
+
+    <div class="card">
+
+        <img src="https://multimedia.metrocuadrado.com/MC6532901/MC6532901_1_x.jpg">
+
+        <h3>Casa Laureles</h3>
+
+        <p>3 habitaciones - 3 baños</p>
+
+        <h4>$3.000.000</h4>
+        <a href="https://maps.google.com" target="_blank" class="ubicacion">
+    📍 Ver ubicación
+</a>
+        <button class="favorito">❤ Favorito</button>
+
+    </div>
+    <div class="card">
+
+<img src="img/Casa-Samaria.jpg">
+
+<h3>Apartamento Laureles</h3>
+
+<p>$320.000.000</p>
+
+<a href="detalle_laureles.html">
+
+<button class="favorito-btn">
+
+Ver Detalle
+
+</button>
+
+</a>
+
+</div>
+
+    <div class="card">
+
+        <img src="https://pics.nuroa.com/venta_casa_villa_ines_puente_aranda_bogota_d_c_4220000772620468874.jpg">
+
+        <h3>Casa Moderna</h3>
+
+        <p>6 habitaciones - 2 parqueaderos</p>
+
+        <h4>$7.000.000</h4>
+        <a href="https://maps.google.com" target="_blank" class="ubicacion">
+    📍 Ver ubicación
+</a>
+        <button class="favorito">❤ Favorito</button>
+
+    </div>
+
+</section>
+
+<h2 style="text-align:center;">Casas en Venta</h2>
+
+<section class="propiedades" id="compra">
+
+    <div class="card">
+
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/665046500.jpg?k=98ec9528e537a13951e789015a0b8fed92f7eb79226e3b4c904457f87c6ae32e&o=">
+    
+        <h3>Casa en Medellín</h3>
+    
+        <p>4 habitaciones - 4 baños</p>
+    
+        <h4>$450.000.000</h4>
+        <a href="https://maps.google.com" target="_blank" class="ubicacion">
+    📍 Ver ubicación
+</a>
+        <button class="favorito">❤ Favorito</button>
+    
+    </div>
+   
+    <div class="card">
+    
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/f3/6c/39/getlstd-property-photo.jpg?w=900&h=500&s=1">
+    
+        <h3>Casa Campestre</h3>
+    
+        <p>5 habitaciones - Piscina</p>
+    
+        <h4>$650.000.000</h4>
+        <a href="https://maps.google.com" target="_blank" class="ubicacion">
+    📍 Ver ubicación
+</a>
+        <button class="favorito">❤ Favorito</button>
+    
+    </div>
+
+<footer>
+
+    <p>vajistech © 2026
+        Frank Bandera
+    </p>
+
+</footer>
+<footer class="footer">
+
+<h3>VajisTech</h3>
+
+<p>Tu innovación en nuestras manos</p>
+
+<p>Contacto: vajistech@gmail.com</p>
+
+</footer>
+<script>
+
+function buscarCasa(){
+
+    let texto = document.getElementById("busqueda").value;
+
+    texto = texto.toLowerCase();
+
+    if(texto.includes("chia")){
+
+        window.location.href = "detalle_propiedad.html";
+
+    }else{
+
+        alert("No se encontraron propiedades");
+
+    }
+
+}
+
+</script>
+</body>
+</html>

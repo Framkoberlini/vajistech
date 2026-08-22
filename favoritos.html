@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Favoritos</title>
+
+<link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+<header class="header-detalle">
+
+<img src="img/logo.png" class="logo-detalle">
+
+<h1>Mis Favoritos</h1>
+
+</header>
+
+<section class="detalle-propiedad">
+
+    <div id="listaFavoritos"></div>
+
+</section>
+<script>
+
+let favoritos =
+JSON.parse(localStorage.getItem("favoritos")) || [];
+
+let contenedor =
+document.getElementById("listaFavoritos");
+
+favoritos.forEach(propiedad => {
+
+    contenedor.innerHTML += `
+
+    <div class="card">
+
+        <h3>${propiedad.nombre}</h3>
+
+        <p>${propiedad.precio}</p>
+
+    </div>
+
+    `;
+
+});
+
+</script>
+</body>
+
+</html>

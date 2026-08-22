@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Propiedades</title>
+
+<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+</head>
+
+<body>
+
+<header class="header-detalle">
+
+<img src="{% static 'img/logo.png' %}" class="logo-detalle">
+
+<h1>Propiedades Disponibles</h1>
+
+</header>
+
+<section class="filtros">
+
+<select id="ciudad" onchange="filtrarCiudad()"></select>
+<option>Todas las ciudades</option>
+<option>Bogotá</option>
+<option>Medellín</option>
+<option>Chía</option>
+</select>
+
+<select>
+<option>Tipo</option>
+<option>Casa</option>
+<option>Apartamento</option>
+</select>
+
+</section>
+
+<section class="propiedades-grid">
+
+<div class="card">
+
+<img src="{% static 'img/Casa-Samaria.jpg' %}">
+
+<h3>Casa en Chía</h3>
+
+<p>$650.000.000</p>
+
+<a href="detalle_propiedad.html">
+    <button type="button">Ver Detalle</button>
+</a>
+
+<form method="POST" action="{% url 'agregar_favorito' %}">
+    {% csrf_token %}
+    <input type="hidden" name="nombre" value="Casa en Chía">
+    <input type="hidden" name="imagen" value="img/Casa-Samaria.jpg' %}">
+    <input type="hidden" name="precio" value="$450.000.000">
+    <input type="hidden" name="detalle_url" value="detalle_propiedad.html">
+
+    <button type="submit" class="favorito-btn">
+        ❤️ Favorito
+    </button>
+</form>
+
+</div>
+
+<div class="card">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC-eXJ5jZUBWKvhxNmMJHbYGmatLw9QGo4UmM8LrPVeQ&s=10">
+
+<h3>Casa Moderna</h3>
+
+<p>$450.000.000</p>
+
+<a href="detalle_moderna.html">
+    <button type="button">Ver Detalle</button>
+</a>
+
+<form method="POST" action="{% url 'agregar_favorito' %}">
+    {% csrf_token %}
+    <input type="hidden" name="nombre" value="Casa Moderna">
+    <input type="hidden" name="imagen" value="{% static 'img/Casa-Samaria.jpg' %}">
+    <input type="hidden" name="precio" value="$600.000.000">
+    <input type="hidden" name="detalle_url" value="detalle_moderna.html">
+
+    <button type="submit" class="favorito-btn">
+        ❤️ Favorito
+    </button>
+</form>
+
+</div>
+
+<div class="card">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU8KXmwS-CKw7gLjguWl1OM4tbui03b6G567hQKD71Kg&s=10">
+
+<h3>Apartamento Laureles</h3>
+
+<p>$320.000.000</p>
+
+<a href="detalle_laureles.html">
+    <button type="button">Ver Detalle</button>
+</a>
+<form method="POST" action="{% url 'agregar_favorito' %}">
+    {% csrf_token %}
+    <input type="hidden" name="nombre" value="Apartamento Laureles">
+    <input type="hidden" name="imagen" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU8KXmwS-CKw7gLjguWl1OM4tbui03b6G567hQKD71Kg&s=10">
+    <input type="hidden" name="precio" value="$380.000.000">
+    <input type="hidden" name="detalle_url" value="detalle_laureles.html">
+
+    <button type="submit" class="favorito-btn">
+        ❤️ Favorito
+    </button>
+</form>
+
+</div>
+
+</section>
+<script>
+
+function filtrarCiudad(){
+
+    let ciudad =
+    document.getElementById("ciudad").value;
+
+    alert("Filtro aplicado: " + ciudad);
+
+}
+
+</script>
+</body>
+
+</html>

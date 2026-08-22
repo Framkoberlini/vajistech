@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Detalle Propiedad</title>
+
+<link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+<header class="header-detalle">
+
+    <img src="img/logo.png" class="logo-detalle">
+
+    <h1>Casa en Chía</h1>
+
+</header>
+
+<section class="detalle-propiedad">
+
+    <div class="imagen-detalle">
+
+        <img src="img/Casa-Samaria.jpg" alt="Casa">
+
+    </div>
+
+    <div class="info-detalle">
+
+        <h2>$650.000.000</h2>
+
+        <p><strong>Ubicación:</strong> Chía, Cundinamarca</p>
+
+        <p><strong>Habitaciones:</strong> 5</p>
+
+        <p><strong>Baños:</strong> 2</p>
+
+        <p><strong>Parqueaderos:</strong> 2</p>
+
+        <p>
+        Hermosa casa moderna ubicada en una zona residencial,
+        ideal para familias y con excelentes acabados.
+        </p>
+
+        <button class="favorito-btn" onclick="guardarFavorito(this)">
+    ❤️ Agregar a Favoritos
+</button>
+        <h3>📍 Ubicación</h3>
+
+<iframe
+    src="https://www.google.com/maps?q=Chia,Cundinamarca&output=embed"
+    width="100%"
+    height="300"
+    style="border:0; border-radius:10px;"
+    allowfullscreen=""
+    loading="lazy">
+</iframe>
+
+    </div>
+
+</section>
+<script>
+
+function guardarFavorito(boton){
+
+    let favoritos =
+    JSON.parse(localStorage.getItem("favoritos")) || [];
+
+    let propiedad = {
+
+        nombre:"Casa en Chía",
+
+        precio:"$650.000.000"
+
+    };
+
+    favoritos.push(propiedad);
+
+    localStorage.setItem(
+        "favoritos",
+        JSON.stringify(favoritos)
+    );
+
+    boton.innerHTML="✅ Guardado";
+
+    boton.style.background="green";
+
+}
+
+</script>
+</body>
+
+</html>
